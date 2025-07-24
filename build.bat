@@ -15,13 +15,13 @@ if not exist "venv" (
 call venv\Scripts\activate.bat
 
 :: Check if build script exists
-if exist "build_py.py" (
+if exist "build.py" (
     echo 🚀 Starting build process...
     echo.
-    python build_py.py
+    python build.py
 ) else (
     echo ❌ Build script not found!
-    echo Looking for: build_py.py
+    echo Looking for: build.py
     pause
     exit /b 1
 )

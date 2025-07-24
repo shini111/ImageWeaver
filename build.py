@@ -66,7 +66,6 @@ def build_gui():
         "--name", f"{APP_NAME}",
         "--onefile",
         "--windowed",  # No console window
-        "--icon", "icon.ico" if Path("icon.ico").exists() else None,
         "--add-data", "requirements.txt;.",
         "--hidden-import", "customtkinter",
         "--hidden-import", "PIL._tkinter_finder",
@@ -75,8 +74,10 @@ def build_gui():
         "imageweaver_gui.py"
     ]
     
-    # Remove None values
-    cmd = [arg for arg in cmd if arg is not None]
+    # Only add icon if it exists
+    icon_path = Path("icon.ico")
+    if icon_path.exists():
+        cmd.extend(["--icon", str(icon_path)])
     
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
@@ -98,14 +99,15 @@ def build_console():
         "--name", f"{APP_NAME}-Console",
         "--onefile",
         "--console",  # Keep console window
-        "--icon", "icon.ico" if Path("icon.ico").exists() else None,
         "--add-data", "requirements.txt;.",
         "--clean",
         "imageweaver_console.py"
     ]
     
-    # Remove None values
-    cmd = [arg for arg in cmd if arg is not None]
+    # Only add icon if it exists
+    icon_path = Path("icon.ico")
+    if icon_path.exists():
+        cmd.extend(["--icon", str(icon_path)])
     
     try:
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
