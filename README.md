@@ -51,7 +51,7 @@ run_console.bat     # Launch console version
 ### Option 2: Run from Source (Windows)
 ```cmd
 # Clone repository
-git clone https://github.com/yourusername/ImageWeaver.git
+git clone https://github.com/shini111/ImageWeaver.git
 cd ImageWeaver
 
 # One-click setup and launch
@@ -61,7 +61,7 @@ start.bat
 ### Option 3: Run from Source (Cross-platform)
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ImageWeaver.git
+git clone https://github.com/shini111/ImageWeaver.git
 cd ImageWeaver
 
 # Install dependencies
