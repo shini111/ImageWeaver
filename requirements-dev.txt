@@ -1,0 +1,22 @@
+# ImageWeaver - Development Dependencies
+# For building executables and development
+
+# Runtime dependencies
+-r requirements.txt
+
+# Build Tools
+pyinstaller>=6.0.0
+auto-py-to-exe>=2.40.0
+
+# Development Tools  
+black>=23.0.0
+pytest>=7.0.0
+flake8>=6.0.0
+
+# Optional: Enhanced LLM Support
+openai>=1.0.0
+
+# Platform-specific build dependencies
+# Windows: pywin32>=306
+# macOS: py2app>=0.28.0
+# Linux: Additional libraries may be needed

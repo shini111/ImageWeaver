@@ -1,0 +1,40 @@
+# ImageWeaver - Package Manifest
+# Include additional files in the distribution package
+
+# Documentation
+include README.md
+include LICENSE
+include CHANGELOG.md
+
+# Configuration files
+include requirements.txt
+include requirements-dev.txt
+include pyproject.toml
+
+# Build scripts
+include build.py
+include setup.py
+
+# Source files
+include imageweaver_gui.py
+include imageweaver_console.py
+
+# Exclude development and build artifacts
+exclude .gitignore
+exclude *.pyc
+exclude *.pyo
+exclude *.log
+global-exclude __pycache__/*
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude .DS_Store
+global-exclude Thumbs.db
+
+# Exclude build directories
+prune build/
+prune dist/
+prune *.egg-info/
+prune .git/
+prune .github/
+prune .pytest_cache/
+prune .tox/
